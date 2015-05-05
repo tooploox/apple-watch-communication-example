@@ -13,6 +13,7 @@
 		E3C2471E1AF92D7500B0600E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2471D1AF92D7500B0600E /* AppDelegate.swift */; };
 		E3C247211AF92D9200B0600E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C247201AF92D9200B0600E /* Images.xcassets */; };
 		E3C2472B1AF92EF800B0600E /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2472A1AF92EF800B0600E /* ContactsTableViewController.swift */; };
+		E3C2472E1AF931A600B0600E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2472D1AF931A600B0600E /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E3C2471D1AF92D7500B0600E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3C247201AF92D9200B0600E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E3C2472A1AF92EF800B0600E /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		E3C2472D1AF931A600B0600E /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		E3C247281AF92ED800B0600E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E3C2472C1AF9319A00B0600E /* Models */,
 				E3C247291AF92ED800B0600E /* ViewControllers */,
 			);
 			path = Classes;
@@ -142,6 +145,14 @@
 				E3C2472A1AF92EF800B0600E /* ContactsTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E3C2472C1AF9319A00B0600E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3C2472D1AF931A600B0600E /* Contact.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3C2472E1AF931A600B0600E /* Contact.swift in Sources */,
 				E3C2472B1AF92EF800B0600E /* ContactsTableViewController.swift in Sources */,
 				E3C2471E1AF92D7500B0600E /* AppDelegate.swift in Sources */,
 			);
