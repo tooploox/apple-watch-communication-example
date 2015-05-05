@@ -13,16 +13,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="L12-n4-jkG" customClass="ContactTableViewCell" customModule="Contacts" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="44" id="L12-n4-jkG" customClass="ContactTableViewCell" customModule="Contacts" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L12-n4-jkG" id="1te-vy-xej">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lf-Om-RYo">
-                                            <rect key="frame" x="20" y="11" width="560" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="bwo-Fh-xOP"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lf-Om-RYo">
+                                            <rect key="frame" x="20" y="10" width="560" height="23"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -30,9 +27,16 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="9lf-Om-RYo" secondAttribute="trailing" constant="20" id="H6C-0c-g2o"/>
+                                        <constraint firstAttribute="bottom" secondItem="9lf-Om-RYo" secondAttribute="bottom" constant="10" id="LVr-BU-wGh"/>
                                         <constraint firstAttribute="centerY" secondItem="9lf-Om-RYo" secondAttribute="centerY" id="pfO-7D-ThQ"/>
                                         <constraint firstItem="9lf-Om-RYo" firstAttribute="leading" secondItem="1te-vy-xej" secondAttribute="leading" constant="20" id="sRl-a6-Etg"/>
+                                        <constraint firstItem="9lf-Om-RYo" firstAttribute="top" secondItem="1te-vy-xej" secondAttribute="top" constant="10" id="zKq-Xq-iLy"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="pfO-7D-ThQ"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="9lf-Om-RYo" id="ElG-7h-Fuo"/>

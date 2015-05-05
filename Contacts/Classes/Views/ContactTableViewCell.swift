@@ -14,7 +14,7 @@ final class ContactTableViewCell: UITableViewCell {
     
     // MARK: - Public
     
-    func setupWithFirstName(firstName: String, lastName: String) {
-        nameLabel.text = "\(firstName) \(lastName)"
+    func setupWithContact(contact: Contact) {
+        nameLabel.text = "\(contact.firstName) \(contact.lastName)"
     }
 }
