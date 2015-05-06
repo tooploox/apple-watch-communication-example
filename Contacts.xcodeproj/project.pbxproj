@@ -17,12 +17,12 @@
 		E3C247331AF9379500B0600E /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247321AF9379500B0600E /* ContactTableViewCell.swift */; };
 		E3C247351AF9972D00B0600E /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247341AF9972D00B0600E /* NewContactViewController.swift */; };
 		E3C247371AF99C6800B0600E /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247361AF99C6800B0600E /* ContactDetailsViewController.swift */; };
-		E3C247411AF9A13B00B0600E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247401AF9A13B00B0600E /* InterfaceController.swift */; };
-		E3C247431AF9A13B00B0600E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C247421AF9A13B00B0600E /* Images.xcassets */; };
 		E3C247471AF9A13B00B0600E /* Contacts WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = E3C247461AF9A13B00B0600E /* Contacts WatchKit App.app */; };
 		E3C2474F1AF9A13B00B0600E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C2474D1AF9A13B00B0600E /* Interface.storyboard */; };
 		E3C247511AF9A13B00B0600E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C247501AF9A13B00B0600E /* Images.xcassets */; };
 		E3C247541AF9A13B00B0600E /* Contacts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3C2473C1AF9A13B00B0600E /* Contacts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E3C2475F1AF9A87A00B0600E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2475E1AF9A87A00B0600E /* InterfaceController.swift */; };
+		E3C247621AF9A88B00B0600E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C247611AF9A88B00B0600E /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,12 +80,12 @@
 		E3C247361AF99C6800B0600E /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		E3C2473C1AF9A13B00B0600E /* Contacts WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Contacts WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C2473F1AF9A13B00B0600E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3C247401AF9A13B00B0600E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		E3C247421AF9A13B00B0600E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E3C247461AF9A13B00B0600E /* Contacts WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C2474C1AF9A13B00B0600E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3C2474E1AF9A13B00B0600E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		E3C247501AF9A13B00B0600E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3C2475E1AF9A87A00B0600E /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		E3C247611AF9A88B00B0600E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,8 +228,8 @@
 		E3C2473D1AF9A13B00B0600E /* Contacts WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E3C247401AF9A13B00B0600E /* InterfaceController.swift */,
-				E3C247421AF9A13B00B0600E /* Images.xcassets */,
+				E3C2475C1AF9A87A00B0600E /* Classes */,
+				E3C247601AF9A88B00B0600E /* Resources */,
 				E3C2473E1AF9A13B00B0600E /* Supporting Files */,
 			);
 			path = "Contacts WatchKit Extension";
@@ -259,6 +259,30 @@
 				E3C2474C1AF9A13B00B0600E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3C2475C1AF9A87A00B0600E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E3C2475D1AF9A87A00B0600E /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E3C2475D1AF9A87A00B0600E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3C2475E1AF9A87A00B0600E /* InterfaceController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E3C247601AF9A88B00B0600E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E3C247611AF9A88B00B0600E /* Images.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,7 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C247431AF9A13B00B0600E /* Images.xcassets in Resources */,
+				E3C247621AF9A88B00B0600E /* Images.xcassets in Resources */,
 				E3C247471AF9A13B00B0600E /* Contacts WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,7 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C247411AF9A13B00B0600E /* InterfaceController.swift in Sources */,
+				E3C2475F1AF9A87A00B0600E /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
