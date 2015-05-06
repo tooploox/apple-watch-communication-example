@@ -16,6 +16,7 @@
 		E3C2472E1AF931A600B0600E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2472D1AF931A600B0600E /* Contact.swift */; };
 		E3C247331AF9379500B0600E /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247321AF9379500B0600E /* ContactTableViewCell.swift */; };
 		E3C247351AF9972D00B0600E /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247341AF9972D00B0600E /* NewContactViewController.swift */; };
+		E3C247371AF99C6800B0600E /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247361AF99C6800B0600E /* ContactDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		E3C2472D1AF931A600B0600E /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		E3C247321AF9379500B0600E /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		E3C247341AF9972D00B0600E /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
+		E3C247361AF99C6800B0600E /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		E3C247291AF92ED800B0600E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E3C247361AF99C6800B0600E /* ContactDetailsViewController.swift */,
 				E3C2472A1AF92EF800B0600E /* ContactsTableViewController.swift */,
 				E3C247341AF9972D00B0600E /* NewContactViewController.swift */,
 			);
@@ -271,6 +274,7 @@
 			files = (
 				E3C247331AF9379500B0600E /* ContactTableViewCell.swift in Sources */,
 				E3C247351AF9972D00B0600E /* NewContactViewController.swift in Sources */,
+				E3C247371AF99C6800B0600E /* ContactDetailsViewController.swift in Sources */,
 				E3C2472E1AF931A600B0600E /* Contact.swift in Sources */,
 				E3C2472B1AF92EF800B0600E /* ContactsTableViewController.swift in Sources */,
 				E3C2471E1AF92D7500B0600E /* AppDelegate.swift in Sources */,

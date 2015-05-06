@@ -78,7 +78,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psg-Fn-25O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2239" y="351"/>
+            <point key="canvasLocation" x="2309" y="-107"/>
+        </scene>
+        <!--Contact Details View Controller-->
+        <scene sceneID="pES-Xe-9Ak">
+            <objects>
+                <viewController id="QjR-U7-jbt" customClass="ContactDetailsViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fuc-tL-ZUs"/>
+                        <viewControllerLayoutGuide type="bottom" id="IMe-xM-vwf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yaC-K1-cgj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neQ-t9-SHk">
+                                <rect key="frame" x="20" y="104" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIb-sO-cBm">
+                                <rect key="frame" x="20" y="145" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pD-tl-hqv">
+                                <rect key="frame" x="20" y="186" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4pD-tl-hqv" secondAttribute="trailing" constant="20" id="OP9-WI-K12"/>
+                            <constraint firstItem="4pD-tl-hqv" firstAttribute="leading" secondItem="yaC-K1-cgj" secondAttribute="leading" constant="20" id="Ofe-Y5-5hG"/>
+                            <constraint firstAttribute="trailing" secondItem="neQ-t9-SHk" secondAttribute="trailing" constant="20" id="SgJ-cL-JiG"/>
+                            <constraint firstItem="MIb-sO-cBm" firstAttribute="leading" secondItem="yaC-K1-cgj" secondAttribute="leading" constant="20" id="Szb-CV-IDG"/>
+                            <constraint firstItem="4pD-tl-hqv" firstAttribute="top" secondItem="MIb-sO-cBm" secondAttribute="bottom" constant="20" id="XyX-BX-8q9"/>
+                            <constraint firstItem="MIb-sO-cBm" firstAttribute="top" secondItem="neQ-t9-SHk" secondAttribute="bottom" constant="20" id="ho3-Xy-muG"/>
+                            <constraint firstAttribute="trailing" secondItem="MIb-sO-cBm" secondAttribute="trailing" constant="20" id="mRR-ZW-O1w"/>
+                            <constraint firstItem="neQ-t9-SHk" firstAttribute="top" secondItem="fuc-tL-ZUs" secondAttribute="bottom" constant="40" id="wIk-X2-Ro9"/>
+                            <constraint firstItem="neQ-t9-SHk" firstAttribute="leading" secondItem="yaC-K1-cgj" secondAttribute="leading" constant="20" id="yBc-ea-5mB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstNameLabel" destination="neQ-t9-SHk" id="LXS-CT-fAE"/>
+                        <outlet property="lastNameLabel" destination="MIb-sO-cBm" id="IES-Xv-fhO"/>
+                        <outlet property="phoneNumberLabel" destination="4pD-tl-hqv" id="Dne-ng-IGD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Hn-7R-Apq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2309" y="847"/>
         </scene>
         <!--Contacts Table View Controller-->
         <scene sceneID="DCL-m1-vTf">
@@ -116,6 +170,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="9lf-Om-RYo" id="ElG-7h-Fuo"/>
+                                    <segue destination="QjR-U7-jbt" kind="show" identifier="" id="CBU-hu-4rJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -127,7 +182,7 @@
                     <navigationItem key="navigationItem" id="syU-BB-yo3">
                         <barButtonItem key="rightBarButtonItem" title="New" id="YbF-0A-CNq">
                             <connections>
-                                <segue destination="THB-JL-Tiy" kind="show" identifier="ShowCreateNewContactViewController" id="gIp-nF-ybA"/>
+                                <segue destination="THB-JL-Tiy" kind="show" identifier="" id="gIp-nF-ybA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -42,7 +42,7 @@ class NewContactViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction private func createButtonPressed(sender: UIButton) {
-        let createdContact = Contact(firstName: firstNameTextField.text, lastName: lastNameTextField.text, phoneNumber: phoneNumberTextField.text.toInt() ?? 0)
+        let createdContact = Contact(firstName: firstNameTextField.text, lastName: lastNameTextField.text, phoneNumber: phoneNumberTextField.text)
         delegate?.newContactViewControllerDidCreateContact(self, contact: createdContact)
         navigationController?.popViewControllerAnimated(true)
     }

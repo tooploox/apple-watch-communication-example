@@ -16,11 +16,11 @@ final class Contact: NSObject, NSCoding {
     
     let firstName: String!
     let lastName: String!
-    let phoneNumber: Int!
+    let phoneNumber: String!
     
     // MARK: - Initialization
     
-    init(firstName: String, lastName: String, phoneNumber: Int) {
+    init(firstName: String, lastName: String, phoneNumber: String) {
         self.firstName = firstName
         self.lastName = lastName
         self.phoneNumber = phoneNumber
@@ -31,7 +31,7 @@ final class Contact: NSObject, NSCoding {
     init(coder aDecoder: NSCoder) {
         firstName = aDecoder.decodeObjectForKey(firstNameKey) as! String
         lastName = aDecoder.decodeObjectForKey(lastNameKey) as! String
-        phoneNumber = aDecoder.decodeObjectForKey(phoneNumberKey) as! Int
+        phoneNumber = aDecoder.decodeObjectForKey(phoneNumberKey) as! String
     }
     
     func encodeWithCoder(aCoder: NSCoder) {

@@ -11,7 +11,6 @@ import UIKit
 class ContactsTableViewController: UITableViewController, NewContactViewControllerDelegate {
     
     private let contactTableViewCellIdentifier = "ContactTableViewCell"
-    private let createNewContactViewControllerSegueIdentifier = "ShowCreateNewContactViewController"
     
     private var contacts = [Contact]()
     
@@ -52,8 +51,12 @@ class ContactsTableViewController: UITableViewController, NewContactViewControll
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let newContactViewController = segue.destinationViewController as? NewContactViewController where segue.identifier == createNewContactViewControllerSegueIdentifier {
+        if let newContactViewController = segue.destinationViewController as? NewContactViewController {
             newContactViewController.delegate = self
+        }
+        
+        if let contactDetailsViewController = segue.destinationViewController as? ContactDetailsViewController, indexPathForSelectedRow = tableView.indexPathForSelectedRow() {
+            contactDetailsViewController.contact = contacts[indexPathForSelectedRow.row]
         }
     }
 }
