@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ContactsTableViewController: UITableViewController {
+class ContactsTableViewController: UITableViewController, NewContactViewControllerDelegate {
     
     private let contactTableViewCellIdentifier = "ContactTableViewCell"
+    private let createNewContactViewControllerSegueIdentifier = "ShowCreateNewContactViewController"
     
     private var contacts = [Contact]()
     
@@ -19,6 +20,12 @@ class ContactsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
+    }
+    
+    // MARK: - Private
+    
+    private func setupView() {
         tableView.estimatedRowHeight = 44.0
         tableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -33,5 +40,20 @@ class ContactsTableViewController: UITableViewController {
         var contactCell = tableView.dequeueReusableCellWithIdentifier(contactTableViewCellIdentifier, forIndexPath: indexPath) as! ContactTableViewCell
         contactCell.setupWithContact(contacts[indexPath.row])
         return contactCell
+    }
+    
+    // MARK: - NewContactViewControllerDelegate
+    
+    func newContactViewControllerDidCreateContact(newContactViewController: NewContactViewController, contact: Contact) {
+        contacts.append(contact)
+        tableView.reloadData()
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let newContactViewController = segue.destinationViewController as? NewContactViewController where segue.identifier == createNewContactViewControllerSegueIdentifier {
+            newContactViewController.delegate = self
+        }
     }
 }

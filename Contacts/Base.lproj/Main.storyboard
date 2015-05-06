@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Djj-iV-Y0E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uwR-OC-O8b">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
+        <!--New Contact View Controller-->
+        <scene sceneID="NPv-xj-IbK">
+            <objects>
+                <viewController id="THB-JL-Tiy" customClass="NewContactViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aym-vu-c5u"/>
+                        <viewControllerLayoutGuide type="bottom" id="EDU-vg-Xbr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b2V-fv-BSI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="38I-Zv-Lt2">
+                                <rect key="frame" x="20" y="104" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="firstNameTextFieldEditingChanged:" destination="THB-JL-Tiy" eventType="editingChanged" id="87X-y2-jwb"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2g-zZ-5ud">
+                                <rect key="frame" x="20" y="154" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="lastNameTextFieldEditingChanged:" destination="THB-JL-Tiy" eventType="editingChanged" id="LVL-Sh-56p"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="me5-qI-0ZU">
+                                <rect key="frame" x="20" y="204" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
+                                <connections>
+                                    <action selector="phoneNumberTextFieldEditingChanged:" destination="THB-JL-Tiy" eventType="editingChanged" id="iEh-BN-U7M"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hY-AV-mpk">
+                                <rect key="frame" x="240" y="274" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="gTe-cY-cco"/>
+                                    <constraint firstAttribute="height" constant="40" id="yWS-Zk-GXQ"/>
+                                </constraints>
+                                <state key="normal" title="Create contact">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createButtonPressed:" destination="THB-JL-Tiy" eventType="touchUpInside" id="ytO-jg-ZKe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="me5-qI-0ZU" secondAttribute="trailing" constant="20" id="57X-hr-Jmk"/>
+                            <constraint firstItem="me5-qI-0ZU" firstAttribute="top" secondItem="e2g-zZ-5ud" secondAttribute="bottom" constant="20" id="IYx-0W-Wa0"/>
+                            <constraint firstItem="2hY-AV-mpk" firstAttribute="top" secondItem="me5-qI-0ZU" secondAttribute="bottom" constant="40" id="MQu-Aa-g2R"/>
+                            <constraint firstItem="38I-Zv-Lt2" firstAttribute="leading" secondItem="b2V-fv-BSI" secondAttribute="leading" constant="20" id="Mgz-9D-JU3"/>
+                            <constraint firstAttribute="trailing" secondItem="e2g-zZ-5ud" secondAttribute="trailing" constant="20" id="Pmr-VE-LiZ"/>
+                            <constraint firstAttribute="trailing" secondItem="38I-Zv-Lt2" secondAttribute="trailing" constant="20" id="Y4x-KK-CVH"/>
+                            <constraint firstItem="me5-qI-0ZU" firstAttribute="leading" secondItem="b2V-fv-BSI" secondAttribute="leading" constant="20" id="pGS-VN-t43"/>
+                            <constraint firstItem="38I-Zv-Lt2" firstAttribute="top" secondItem="aym-vu-c5u" secondAttribute="bottom" constant="40" id="thG-9J-nzO"/>
+                            <constraint firstAttribute="centerX" secondItem="2hY-AV-mpk" secondAttribute="centerX" id="wHz-Oc-IbE"/>
+                            <constraint firstItem="e2g-zZ-5ud" firstAttribute="leading" secondItem="b2V-fv-BSI" secondAttribute="leading" constant="20" id="wbN-Ju-ShQ"/>
+                            <constraint firstItem="e2g-zZ-5ud" firstAttribute="top" secondItem="38I-Zv-Lt2" secondAttribute="bottom" constant="20" id="zUU-t3-Eg5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createContactButton" destination="2hY-AV-mpk" id="anh-eJ-26b"/>
+                        <outlet property="firstNameTextField" destination="38I-Zv-Lt2" id="v5A-gw-Rax"/>
+                        <outlet property="lastNameTextField" destination="e2g-zZ-5ud" id="NUf-HX-UHR"/>
+                        <outlet property="phoneNumberTextField" destination="me5-qI-0ZU" id="mQ8-8V-YPl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psg-Fn-25O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2239" y="351"/>
+        </scene>
         <!--Contacts Table View Controller-->
         <scene sceneID="DCL-m1-vTf">
             <objects>
@@ -48,8 +124,33 @@
                             <outlet property="delegate" destination="Djj-iV-Y0E" id="Gov-jm-mXu"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="syU-BB-yo3">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="YbF-0A-CNq">
+                            <connections>
+                                <segue destination="THB-JL-Tiy" kind="show" identifier="ShowCreateNewContactViewController" id="gIp-nF-ybA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRG-Fs-LJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1395" y="351"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9pK-XY-lci">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uwR-OC-O8b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OdK-OX-9eO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Djj-iV-Y0E" kind="relationship" relationship="rootViewController" id="Ywy-UT-HRh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jlb-h3-Oub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="583" y="351"/>
         </scene>
