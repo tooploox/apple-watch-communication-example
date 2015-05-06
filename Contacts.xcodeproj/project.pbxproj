@@ -25,6 +25,7 @@
 		E3C247541AF9A13B00B0600E /* Contacts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3C2473C1AF9A13B00B0600E /* Contacts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E3C2475F1AF9A87A00B0600E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2475E1AF9A87A00B0600E /* InterfaceController.swift */; };
 		E3C247621AF9A88B00B0600E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C247611AF9A88B00B0600E /* Images.xcassets */; };
+		E3C247651AF9A9ED00B0600E /* WatchKitDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247641AF9A9ED00B0600E /* WatchKitDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		E3C247501AF9A13B00B0600E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E3C2475E1AF9A87A00B0600E /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		E3C247611AF9A88B00B0600E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3C247641AF9A9ED00B0600E /* WatchKitDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchKitDataManager.swift; sourceTree = "<group>"; };
+		E3C247661AF9AA2900B0600E /* Contacts-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contacts-Bridging-Header.h"; sourceTree = "<group>"; };
 		EBC71BEDB7E0DC9174B927A8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -176,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				E3C246FB1AF9118B00B0600E /* Info.plist */,
+				E3C247661AF9AA2900B0600E /* Contacts-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -218,6 +222,7 @@
 		E3C247281AF92ED800B0600E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E3C247631AF9A9D600B0600E /* Managers */,
 				E3C2472C1AF9319A00B0600E /* Models */,
 				E3C247291AF92ED800B0600E /* ViewControllers */,
 				E3C247311AF9374900B0600E /* Views */,
@@ -309,6 +314,14 @@
 				E3C247611AF9A88B00B0600E /* Images.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E3C247631AF9A9D600B0600E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E3C247641AF9A9ED00B0600E /* WatchKitDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,6 +554,7 @@
 			files = (
 				E3C247331AF9379500B0600E /* ContactTableViewCell.swift in Sources */,
 				E3C247351AF9972D00B0600E /* NewContactViewController.swift in Sources */,
+				E3C247651AF9A9ED00B0600E /* WatchKitDataManager.swift in Sources */,
 				E3C247371AF99C6800B0600E /* ContactDetailsViewController.swift in Sources */,
 				E3C2472E1AF931A600B0600E /* Contact.swift in Sources */,
 				E3C2472B1AF92EF800B0600E /* ContactsTableViewController.swift in Sources */,
@@ -703,6 +717,7 @@
 				INFOPLIST_FILE = Contacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts/Contacts-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -714,6 +729,7 @@
 				INFOPLIST_FILE = Contacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts/Contacts-Bridging-Header.h";
 			};
 			name = Release;
 		};
