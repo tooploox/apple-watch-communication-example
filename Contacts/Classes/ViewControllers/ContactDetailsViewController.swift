@@ -14,6 +14,8 @@ class ContactDetailsViewController: UIViewController {
     @IBOutlet private weak var lastNameLabel: UILabel!
     @IBOutlet private weak var phoneNumberLabel: UILabel!
     
+    private let watchKitDataManager = WatchKitDataManager()
+    
     var contact: Contact!
     
     // MARK: - UIViewController
@@ -22,6 +24,7 @@ class ContactDetailsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         setupView()
+        sendContact()
     }
     
     // MARK: - Private
@@ -30,5 +33,9 @@ class ContactDetailsViewController: UIViewController {
         firstNameLabel.text = contact.firstName
         lastNameLabel.text = contact.lastName
         phoneNumberLabel.text = contact.phoneNumber
+    }
+    
+    private func sendContact() {
+        watchKitDataManager.sendContact(contact)
     }
 }

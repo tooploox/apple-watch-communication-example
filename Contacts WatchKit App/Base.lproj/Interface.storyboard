@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Contact Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="ContactInterfaceController" customModule="Contacts_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" textAlignment="center" numberOfLines="0" id="9NU-An-eBm"/>
+                        <label width="1" alignment="left" textAlignment="center" numberOfLines="0" id="DHE-ja-eHE"/>
+                        <label width="1" alignment="left" textAlignment="center" numberOfLines="0" id="n2I-Jx-Gzg"/>
+                    </items>
+                    <connections>
+                        <outlet property="firstNameLabel" destination="9NU-An-eBm" id="PQn-zS-Qar"/>
+                        <outlet property="lastNameLabel" destination="DHE-ja-eHE" id="B7f-ri-iXL"/>
+                        <outlet property="phoneNumberLabel" destination="n2I-Jx-Gzg" id="5Za-rp-bV2"/>
+                    </connections>
+                </controller>
             </objects>
         </scene>
     </scenes>

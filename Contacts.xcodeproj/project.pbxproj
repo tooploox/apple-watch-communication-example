@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		34A459789755BBB0DE5CCC49 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC71BEDB7E0DC9174B927A8 /* libPods.a */; };
 		A19B18F568D4461411137874 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC71BEDB7E0DC9174B927A8 /* libPods.a */; };
+		E334BED01AFBCAEE008B48E7 /* ContactInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E334BECF1AFBCAEE008B48E7 /* ContactInterfaceController.swift */; };
+		E391E2421AFBC09E00F291EC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2472D1AF931A600B0600E /* Contact.swift */; };
+		E391E2431AFBC0A400F291EC /* WatchKitDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247641AF9A9ED00B0600E /* WatchKitDataManager.swift */; };
 		E3C247021AF9118B00B0600E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C247001AF9118B00B0600E /* Main.storyboard */; };
 		E3C247071AF9118B00B0600E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3C247051AF9118B00B0600E /* LaunchScreen.xib */; };
 		E3C247131AF9118C00B0600E /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247121AF9118C00B0600E /* ContactsTests.swift */; };
@@ -23,7 +26,6 @@
 		E3C2474F1AF9A13B00B0600E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C2474D1AF9A13B00B0600E /* Interface.storyboard */; };
 		E3C247511AF9A13B00B0600E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C247501AF9A13B00B0600E /* Images.xcassets */; };
 		E3C247541AF9A13B00B0600E /* Contacts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3C2473C1AF9A13B00B0600E /* Contacts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E3C2475F1AF9A87A00B0600E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2475E1AF9A87A00B0600E /* InterfaceController.swift */; };
 		E3C247621AF9A88B00B0600E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C247611AF9A88B00B0600E /* Images.xcassets */; };
 		E3C247651AF9A9ED00B0600E /* WatchKitDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247641AF9A9ED00B0600E /* WatchKitDataManager.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +71,10 @@
 /* Begin PBXFileReference section */
 		78DB22EC455DF6D2DEDD374F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CEEA707B8317AA646FDE94E8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E334BECF1AFBCAEE008B48E7 /* ContactInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInterfaceController.swift; sourceTree = "<group>"; };
+		E391E2441AFBC11700F291EC /* Contacts-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contacts-Bridging-Header.h"; sourceTree = "<group>"; };
+		E391E2451AFBC26300F291EC /* Contacts WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Contacts WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		E391E2461AFBC33800F291EC /* Contacts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Contacts.entitlements; sourceTree = "<group>"; };
 		E3C246F71AF9118B00B0600E /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C246FB1AF9118B00B0600E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3C247011AF9118B00B0600E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,7 +95,6 @@
 		E3C2474C1AF9A13B00B0600E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3C2474E1AF9A13B00B0600E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		E3C247501AF9A13B00B0600E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E3C2475E1AF9A87A00B0600E /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		E3C247611AF9A88B00B0600E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E3C247641AF9A9ED00B0600E /* WatchKitDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchKitDataManager.swift; sourceTree = "<group>"; };
 		E3C247661AF9AA2900B0600E /* Contacts-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contacts-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -140,6 +145,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E334BECE1AFBCAD2008B48E7 /* InterfaceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E334BECF1AFBCAEE008B48E7 /* ContactInterfaceController.swift */,
+			);
+			path = InterfaceControllers;
+			sourceTree = "<group>";
+		};
 		E3C246EE1AF9118B00B0600E = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +180,7 @@
 		E3C246F91AF9118B00B0600E /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				E391E2461AFBC33800F291EC /* Contacts.entitlements */,
 				E3C2471C1AF92D7500B0600E /* App */,
 				E3C247281AF92ED800B0600E /* Classes */,
 				E3C2471F1AF92D9200B0600E /* Resources */,
@@ -259,6 +273,7 @@
 		E3C2473D1AF9A13B00B0600E /* Contacts WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E391E2451AFBC26300F291EC /* Contacts WatchKit Extension.entitlements */,
 				E3C2475C1AF9A87A00B0600E /* Classes */,
 				E3C247601AF9A88B00B0600E /* Resources */,
 				E3C2473E1AF9A13B00B0600E /* Supporting Files */,
@@ -270,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				E3C2473F1AF9A13B00B0600E /* Info.plist */,
+				E391E2441AFBC11700F291EC /* Contacts-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -295,17 +311,9 @@
 		E3C2475C1AF9A87A00B0600E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E3C2475D1AF9A87A00B0600E /* ViewControllers */,
+				E334BECE1AFBCAD2008B48E7 /* InterfaceControllers */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		E3C2475D1AF9A87A00B0600E /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				E3C2475E1AF9A87A00B0600E /* InterfaceController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		E3C247601AF9A88B00B0600E /* Resources */ = {
@@ -412,6 +420,12 @@
 				TargetAttributes = {
 					E3C246F61AF9118B00B0600E = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 89T2GE89HD;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E3C2470B1AF9118C00B0600E = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -419,6 +433,12 @@
 					};
 					E3C2473B1AF9A13B00B0600E = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 89T2GE89HD;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E3C247451AF9A13B00B0600E = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -574,7 +594,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C2475F1AF9A87A00B0600E /* InterfaceController.swift in Sources */,
+				E391E2421AFBC09E00F291EC /* Contact.swift in Sources */,
+				E391E2431AFBC0A400F291EC /* WatchKitDataManager.swift in Sources */,
+				E334BED01AFBCAEE008B48E7 /* ContactInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,9 +736,13 @@
 			baseConfigurationReference = CEEA707B8317AA646FDE94E8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Contacts/Contacts.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Contacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Contacts/Contacts-Bridging-Header.h";
 			};
 			name = Debug;
@@ -726,9 +752,13 @@
 			baseConfigurationReference = 78DB22EC455DF6D2DEDD374F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Contacts/Contacts.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Contacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Contacts/Contacts-Bridging-Header.h";
 			};
 			name = Release;
@@ -803,6 +833,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEEA707B8317AA646FDE94E8 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Contacts WatchKit Extension/Contacts WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -810,7 +844,11 @@
 				INFOPLIST_FILE = "Contacts WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts WatchKit Extension/Contacts-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -818,10 +856,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 78DB22EC455DF6D2DEDD374F /* Pods.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Contacts WatchKit Extension/Contacts WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Contacts WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts WatchKit Extension/Contacts-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;
 		};
