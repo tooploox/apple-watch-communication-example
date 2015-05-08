@@ -14,9 +14,9 @@ final class Contact: NSObject, NSCoding {
     private let lastNameKey = "lastName"
     private let phoneNumberKey = "phoneNumber"
     
-    let firstName: String!
-    let lastName: String!
-    let phoneNumber: String!
+    let firstName: String
+    let lastName: String
+    let phoneNumber: String
     
     // MARK: - Initialization
     
