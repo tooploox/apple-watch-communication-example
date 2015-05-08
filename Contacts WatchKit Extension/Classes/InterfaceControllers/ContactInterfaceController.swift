@@ -29,8 +29,8 @@ class ContactInterfaceController: WKInterfaceController, WatchKitDataManagerDele
     // MARK: - Private
     
     private func readContact() {
-        if let unwrappedContact = watchKitDataManager.readContact() {
-            setupViewWithContact(unwrappedContact)
+        if let contact = watchKitDataManager.readContact() {
+            setupViewWithContact(contact)
         }
     }
     
