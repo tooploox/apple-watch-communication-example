@@ -16,7 +16,7 @@ class ContactDetailsViewController: UIViewController {
     
     private let watchKitDataManager = WatchKitDataManager()
     
-    var contact: Contact!
+    var contact: Contact?
     
     // MARK: - UIViewController
     
@@ -29,12 +29,16 @@ class ContactDetailsViewController: UIViewController {
     // MARK: - Private
     
     private func setupView() {
-        firstNameLabel.text = contact.firstName
-        lastNameLabel.text = contact.lastName
-        phoneNumberLabel.text = contact.phoneNumber
+        if let contact = contact {
+            firstNameLabel.text = contact.firstName
+            lastNameLabel.text = contact.lastName
+            phoneNumberLabel.text = contact.phoneNumber
+        }
     }
     
     private func sendContact() {
-        watchKitDataManager.sendContact(contact)
+        if let contact = contact {
+            watchKitDataManager.sendContact(contact)
+        }
     }
 }
