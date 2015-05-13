@@ -21,7 +21,6 @@ class ContactInterfaceController: WKInterfaceController, WatchKitDataManagerDele
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
         readContact()
         setupListener()
     }

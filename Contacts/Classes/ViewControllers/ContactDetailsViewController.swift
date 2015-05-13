@@ -22,7 +22,6 @@ class ContactDetailsViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         setupView()
         sendContact()
     }

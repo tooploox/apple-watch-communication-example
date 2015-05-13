@@ -14,9 +14,9 @@ protocol WatchKitDataManagerDelegate: class {
 
 class WatchKitDataManager: NSObject {
     
-    let contactClassName = "contact"
+    private let contactClassName = "contact"
     
-    let wormhole = MMWormhole(applicationGroupIdentifier: "group.tooploox.com.Contacts", optionalDirectory: nil)
+    private let wormhole = MMWormhole(applicationGroupIdentifier: "group.tooploox.com.Contacts", optionalDirectory: nil)
     
     weak var delegate: WatchKitDataManagerDelegate?
     
@@ -29,10 +29,7 @@ class WatchKitDataManager: NSObject {
     
     func readContact() -> Contact? {
         NSKeyedUnarchiver.setClass(Contact.self, forClassName: contactClassName)
-        if let unwrappedContact = wormhole.messageWithIdentifier(contactClassName) as? Contact {
-            return unwrappedContact
-        }
-        return nil
+        return wormhole.messageWithIdentifier(contactClassName) as? Contact
     }
     
     func startListeningForContactUpdates() {
