@@ -18,13 +18,12 @@ class ContactsTableViewController: UITableViewController, NewContactViewControll
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupView()
+        setupTableView()
     }
     
     // MARK: - Private
     
-    private func setupView() {
+    private func setupTableView() {
         tableView.estimatedRowHeight = 44.0
         tableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -32,11 +31,11 @@ class ContactsTableViewController: UITableViewController, NewContactViewControll
     // MARK: - UITableViewDataSource
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return count(contacts)
+        return contacts.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var contactCell = tableView.dequeueReusableCellWithIdentifier(contactTableViewCellIdentifier, forIndexPath: indexPath) as! ContactTableViewCell
+        let contactCell = tableView.dequeueReusableCellWithIdentifier(contactTableViewCellIdentifier, forIndexPath: indexPath) as! ContactTableViewCell
         contactCell.setupWithContact(contacts[indexPath.row])
         return contactCell
     }
@@ -53,9 +52,7 @@ class ContactsTableViewController: UITableViewController, NewContactViewControll
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let newContactViewController = segue.destinationViewController as? NewContactViewController {
             newContactViewController.delegate = self
-        }
-        
-        if let contactDetailsViewController = segue.destinationViewController as? ContactDetailsViewController, indexPathForSelectedRow = tableView.indexPathForSelectedRow() {
+        } else if let contactDetailsViewController = segue.destinationViewController as? ContactDetailsViewController, indexPathForSelectedRow = tableView.indexPathForSelectedRow() {
             contactDetailsViewController.contact = contacts[indexPathForSelectedRow.row]
         }
     }
