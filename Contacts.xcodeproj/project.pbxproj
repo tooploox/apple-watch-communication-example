@@ -14,7 +14,6 @@
 		E391E2431AFBC0A400F291EC /* WatchKitDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247641AF9A9ED00B0600E /* WatchKitDataManager.swift */; };
 		E3C247021AF9118B00B0600E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C247001AF9118B00B0600E /* Main.storyboard */; };
 		E3C247071AF9118B00B0600E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3C247051AF9118B00B0600E /* LaunchScreen.xib */; };
-		E3C247131AF9118C00B0600E /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C247121AF9118C00B0600E /* ContactsTests.swift */; };
 		E3C2471E1AF92D7500B0600E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2471D1AF92D7500B0600E /* AppDelegate.swift */; };
 		E3C247211AF92D9200B0600E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C247201AF92D9200B0600E /* Images.xcassets */; };
 		E3C2472B1AF92EF800B0600E /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2472A1AF92EF800B0600E /* ContactsTableViewController.swift */; };
@@ -31,13 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E3C2470D1AF9118C00B0600E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E3C246EF1AF9118B00B0600E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E3C246F61AF9118B00B0600E;
-			remoteInfo = Contacts;
-		};
 		E3C247481AF9A13B00B0600E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E3C246EF1AF9118B00B0600E /* Project object */;
@@ -79,9 +71,6 @@
 		E3C246FB1AF9118B00B0600E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3C247011AF9118B00B0600E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3C247061AF9118B00B0600E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E3C2470C1AF9118C00B0600E /* ContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3C247111AF9118C00B0600E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3C247121AF9118C00B0600E /* ContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTests.swift; sourceTree = "<group>"; };
 		E3C2471D1AF92D7500B0600E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3C247201AF92D9200B0600E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E3C2472A1AF92EF800B0600E /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
@@ -107,13 +96,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A19B18F568D4461411137874 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E3C247091AF9118C00B0600E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				E3C246F91AF9118B00B0600E /* Contacts */,
-				E3C2470F1AF9118C00B0600E /* ContactsTests */,
 				E3C2473D1AF9A13B00B0600E /* Contacts WatchKit Extension */,
 				E3C2474A1AF9A13B00B0600E /* Contacts WatchKit App */,
 				E3C246F81AF9118B00B0600E /* Products */,
@@ -170,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				E3C246F71AF9118B00B0600E /* Contacts.app */,
-				E3C2470C1AF9118C00B0600E /* ContactsTests.xctest */,
 				E3C2473C1AF9A13B00B0600E /* Contacts WatchKit Extension.appex */,
 				E3C247461AF9A13B00B0600E /* Contacts WatchKit App.app */,
 			);
@@ -194,23 +174,6 @@
 			children = (
 				E3C246FB1AF9118B00B0600E /* Info.plist */,
 				E3C247661AF9AA2900B0600E /* Contacts-Bridging-Header.h */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E3C2470F1AF9118C00B0600E /* ContactsTests */ = {
-			isa = PBXGroup;
-			children = (
-				E3C247121AF9118C00B0600E /* ContactsTests.swift */,
-				E3C247101AF9118C00B0600E /* Supporting Files */,
-			);
-			path = ContactsTests;
-			sourceTree = "<group>";
-		};
-		E3C247101AF9118C00B0600E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E3C247111AF9118C00B0600E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -356,24 +319,6 @@
 			productReference = E3C246F71AF9118B00B0600E /* Contacts.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E3C2470B1AF9118C00B0600E /* ContactsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E3C247191AF9118C00B0600E /* Build configuration list for PBXNativeTarget "ContactsTests" */;
-			buildPhases = (
-				E3C247081AF9118C00B0600E /* Sources */,
-				E3C247091AF9118C00B0600E /* Frameworks */,
-				E3C2470A1AF9118C00B0600E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E3C2470E1AF9118C00B0600E /* PBXTargetDependency */,
-			);
-			name = ContactsTests;
-			productName = ContactsTests;
-			productReference = E3C2470C1AF9118C00B0600E /* ContactsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		E3C2473B1AF9A13B00B0600E /* Contacts WatchKit Extension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3C247581AF9A13B00B0600E /* Build configuration list for PBXNativeTarget "Contacts WatchKit Extension" */;
@@ -427,10 +372,6 @@
 							};
 						};
 					};
-					E3C2470B1AF9118C00B0600E = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = E3C246F61AF9118B00B0600E;
-					};
 					E3C2473B1AF9A13B00B0600E = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 89T2GE89HD;
@@ -459,7 +400,6 @@
 			projectRoot = "";
 			targets = (
 				E3C246F61AF9118B00B0600E /* Contacts */,
-				E3C2470B1AF9118C00B0600E /* ContactsTests */,
 				E3C2473B1AF9A13B00B0600E /* Contacts WatchKit Extension */,
 				E3C247451AF9A13B00B0600E /* Contacts WatchKit App */,
 			);
@@ -474,13 +414,6 @@
 				E3C247021AF9118B00B0600E /* Main.storyboard in Resources */,
 				E3C247211AF92D9200B0600E /* Images.xcassets in Resources */,
 				E3C247071AF9118B00B0600E /* LaunchScreen.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E3C2470A1AF9118C00B0600E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,14 +515,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3C247081AF9118C00B0600E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E3C247131AF9118C00B0600E /* ContactsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E3C247381AF9A13B00B0600E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -603,11 +528,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E3C2470E1AF9118C00B0600E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E3C246F61AF9118B00B0600E /* Contacts */;
-			targetProxy = E3C2470D1AF9118C00B0600E /* PBXContainerItemProxy */;
-		};
 		E3C247491AF9A13B00B0600E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E3C247451AF9A13B00B0600E /* Contacts WatchKit App */;
@@ -763,40 +683,6 @@
 			};
 			name = Release;
 		};
-		E3C2471A1AF9118C00B0600E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ContactsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Contacts.app/Contacts";
-			};
-			name = Debug;
-		};
-		E3C2471B1AF9118C00B0600E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ContactsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Contacts.app/Contacts";
-			};
-			name = Release;
-		};
 		E3C247561AF9A13B00B0600E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -887,15 +773,6 @@
 			buildConfigurations = (
 				E3C247171AF9118C00B0600E /* Debug */,
 				E3C247181AF9118C00B0600E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E3C247191AF9118C00B0600E /* Build configuration list for PBXNativeTarget "ContactsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E3C2471A1AF9118C00B0600E /* Debug */,
-				E3C2471B1AF9118C00B0600E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
