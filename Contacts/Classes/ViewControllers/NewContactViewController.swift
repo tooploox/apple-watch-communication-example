@@ -23,22 +23,22 @@ class NewContactViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Private
     
-    private func setCreateContactButtonState() {
+    private func refreshCreateContactButtonState() {
         createContactButton.enabled = firstNameTextField.text != "" && lastNameTextField.text != "" && phoneNumberTextField.text != ""
     }
     
     // MARK: - Actions
     
     @IBAction private func firstNameTextFieldEditingChanged(sender: UITextField) {
-        setCreateContactButtonState()
+        refreshCreateContactButtonState()
     }
     
     @IBAction private func lastNameTextFieldEditingChanged(sender: UITextField) {
-        setCreateContactButtonState()
+        refreshCreateContactButtonState()
     }
     
     @IBAction private func phoneNumberTextFieldEditingChanged(sender: UITextField) {
-        setCreateContactButtonState()
+        refreshCreateContactButtonState()
     }
     
     @IBAction private func createButtonPressed(sender: UIButton) {
